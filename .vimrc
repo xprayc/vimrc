@@ -1,15 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" This vimrc is based on the vimrc by Amix - http://amix.dk/
-"
-" Maintainer: xprayc
-" Version: 1.0
-" Last Change: 2013-01-14 08:10:00
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 "Get out of VI's compatible mode..
 set nocompatible
 
@@ -64,7 +55,6 @@ Bundle 'corntrace/bufexplorer'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 "Enable filetype plugin
 filetype plugin indent on
 
@@ -531,15 +521,6 @@ vmap <silent> <leader>lv :lv /<c-r>=<sid>GetVisualSelection()<cr>/ %<cr>:lw<cr>
 set pastetoggle=<F3>
 nmap <silent> <leader>pa :set paste<cr>
 nmap <silent> <leader>np :set nopaste<cr>
-
-"Fast Ex command
-nnoremap ; :
-
-"For mark move
-nnoremap <leader>' '
-
-"Fast copy
-nnoremap ' "
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mark as loaded
