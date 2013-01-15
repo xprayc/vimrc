@@ -58,7 +58,7 @@ Bundle 'corntrace/bufexplorer'
 "Enable filetype plugin
 filetype plugin indent on
 
-"Sets how many lines of history VIM har to remember
+" Sets how many lines of history VIM har to remember
 set history=400
 
 " Encoding
@@ -66,10 +66,13 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,cp936,big5,euc-jp,euc-kr,latin1
 
-"Set to auto read when a file is changed from the outside
+" Set to auto read when a file is changed from the outside
 set autoread
 
-"Have the mouse enabled all the time:
+" Set to auto write when :! or :make met
+set autowrite
+
+" Have the mouse enabled all the time:
 set mouse=a
 
 "Set mapleader
@@ -206,13 +209,16 @@ set backspace=eol,start,indent
 "Backspace and cursor keys wrap to
 set whichwrap+=<,>
 
-"Ignore case when searching
-"set ignorecase
-
-"Include search
+" Include search
 set incsearch
 
-"Highlight search things
+" Ignore case when searching
+set ignorecase
+
+" Case sensitile when search pattern includes UpperCase
+set smartcase
+
+" Highlight search things
 set hlsearch
 
 "Set magic on
