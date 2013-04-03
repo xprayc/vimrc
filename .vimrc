@@ -30,7 +30,6 @@ Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/lookupfile'
 Bundle 'vim-scripts/a.vim'
 Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
-Bundle 'vim-scripts/Conque-Shell'
 Bundle 'cordarei/vim-cpp'
 Bundle 'vim-scripts/xml.vim'
 Bundle 'vim-scripts/OmniCppComplete'
@@ -39,7 +38,6 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'xandox/vim-csharp'
 Bundle 'uggedal/go-vim'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'klen/python-mode'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'tfnico/vim-gradle'
 Bundle "pangloss/vim-javascript"
@@ -49,8 +47,9 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "honza/snipmate-snippets"
 Bundle 'garbas/vim-snipmate'
-Bundle 'mkitt/browser-refresh.vim'
 Bundle 'corntrace/bufexplorer'
+Bundle 'vim-pandoc/vim-pandoc'
+Bundle 'mattn/zencoding-vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -140,7 +139,7 @@ set t_Co=256
 
 " Set font
 if has("gui_running")
-  set guifont=Monaco:h12
+  set guifont=Monaco:h14
 endif
 
 " Avoid clearing hilight definition in plugins
@@ -537,3 +536,4 @@ nmap <silent> <leader>rp :!python %<cr>
 nmap <silent> <leader>rs :!scala %<cr>
 nmap <silent> <leader>rk :!ruby path_to_enlightenment.rb<cr>
 nnoremap <F5> :GundoToggle<CR>
+nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
