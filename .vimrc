@@ -45,8 +45,8 @@ Bundle 'scottmcginness/vim-jquery'
 Bundle 'kchmck/vim-coffee-script'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
 Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 Bundle 'corntrace/bufexplorer'
 Bundle 'vim-pandoc/vim-pandoc'
 Bundle 'mattn/zencoding-vim'
