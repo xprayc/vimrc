@@ -1,8 +1,9 @@
+"Get out of VI's compatible mode..
+set nocompatible
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Get out of VI's compatible mode..
-set nocompatible
 
 " Required!
 filetype off
@@ -33,7 +34,7 @@ Bundle 'vim-scripts/Screen-vim---gnu-screentmux'
 Bundle 'cordarei/vim-cpp'
 Bundle 'vim-scripts/xml.vim'
 Bundle 'vim-scripts/OmniCppComplete'
-Bundle 'vim-scripts/tComment'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'xandox/vim-csharp'
 Bundle 'uggedal/go-vim'
@@ -46,10 +47,11 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
+Bundle "honza/vim-snippets"
 Bundle 'corntrace/bufexplorer'
 Bundle 'vim-pandoc/vim-pandoc'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'slim-template/vim-slim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -329,11 +331,11 @@ set shiftwidth=4
 map <leader>t2 :set shiftwidth=2<cr>
 map <leader>t4 :set shiftwidth=4<cr>
 
-au FileType html,vim,sh,xml,ruby,eruby,groovy setl shiftwidth=2
-au FileType html,vim,sh,xml,ruby,eruby,groovy setl tabstop=2
+au FileType html,vim,sh,xml,ruby,eruby,groovy,coffee,javascript,css setl shiftwidth=2
+au FileType html,vim,sh,xml,ruby,eruby,groovy,coffee,javascript,css setl tabstop=2
 
-au FileType java,c,python,php,javascript setl shiftwidth=4
-au FileType java,c,python,php,javascript setl tabstop=4
+au FileType java,c,python,php setl shiftwidth=4
+au FileType java,c,python,php setl tabstop=4
 
 au FileType txt setl lbr
 au FileType txt setl tw=78
@@ -420,6 +422,7 @@ nmap <silent> <leader>tb :TagbarToggle<cr>
 " Nerd Tree setting
 """"""""""""""""""""""""""""""
 nmap <silent> <leader>nt :NERDTreeToggle<cr>
+let NERDTreeDirArrows=0
 
 """"""""""""""""""""""""""""""
 " lookupfile setting
