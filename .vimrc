@@ -540,3 +540,4 @@ nmap <silent> <leader>rs :!scala %<cr>
 nmap <silent> <leader>rk :!ruby path_to_enlightenment.rb<cr>
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+cnoremap <expr> %% getcmdtype() == ":" ? expand("%:h")."/" : "%%"
