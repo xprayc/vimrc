@@ -52,6 +52,8 @@ Bundle 'corntrace/bufexplorer'
 Bundle 'vim-pandoc/vim-pandoc'
 Bundle 'mattn/emmet-vim'
 Bundle 'slim-template/vim-slim'
+Bundle 'nelstrom/vim-qargs'
+Bundle 'tpope/vim-abolish'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -77,8 +79,9 @@ set autowrite
 set mouse=a
 
 "Set mapleader
-let mapleader = ";"
-let g:mapleader = ";"
+let mapleader = ","
+let g:mapleader = ","
+noremap \ ,
 
 "Fast saving
 nmap <silent> <leader>ww :w<cr>
@@ -235,6 +238,7 @@ set t_vb=
 """"""""""""""""""""""""""""""
 "Always show the statusline
 set laststatus=2
+set statusline=%f%m%r%h%w\ %=%([%{&ff}\][%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}\]%y%)\ \ %([%l,%v]\[%P]\ %)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Moving around and tabs
