@@ -79,9 +79,8 @@ set autowrite
 set mouse=a
 
 "Set mapleader
-let mapleader = ","
-let g:mapleader = ","
-noremap \ ,
+let mapleader = "\\"
+let g:mapleader = "\\"
 
 "Fast saving
 nmap <silent> <leader>ww :w<cr>
@@ -238,7 +237,7 @@ set t_vb=
 """"""""""""""""""""""""""""""
 "Always show the statusline
 set laststatus=2
-set statusline=%f%m%r%h%w\ %=%([%{&ff}\][%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}\]%y%)\ \ %([%l,%v]\[%P]\ %)
+set statusline=\ %f%m%r%h%w\ %=%([%{&ff}\][%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}\]%y%)\ %([%l,%v]\[%P]\ %)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Moving around and tabs
@@ -329,20 +328,15 @@ set nowb
 " Text options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set smarttab
+
+" Default tabstop set to 4 spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
-set shiftwidth=4
-map <leader>t2 :set shiftwidth=2<cr>
-map <leader>t4 :set shiftwidth=4<cr>
-
-au FileType html,vim,sh,xml,ruby,eruby,groovy,coffee,javascript,css setl shiftwidth=2
-au FileType html,vim,sh,xml,ruby,eruby,groovy,coffee,javascript,css setl tabstop=2
-
-au FileType java,c,python,php setl shiftwidth=4
-au FileType java,c,python,php setl tabstop=4
-
-au FileType txt setl lbr
-au FileType txt setl tw=78
+map <leader>t2 :set shiftwidth=2 tabstop=2 softtabstop=2<cr>
+map <leader>t4 :set shiftwidth=4 tabstop=4 softtabstop=4<cr>
 
 """"""""""""""""""""""""""""""
 " Indent
@@ -533,6 +527,12 @@ vmap <silent> <leader>lv :lv /<c-r>=<sid>GetVisualSelection()<cr>/ %<cr>:lw<cr>
 set pastetoggle=<F3>
 nmap <silent> <leader>pa :set paste<cr>
 nmap <silent> <leader>np :set nopaste<cr>
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+ 
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mark as loaded
