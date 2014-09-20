@@ -18,9 +18,18 @@ Bundle 'gmarik/github-search.vim'
 Bundle 'gmarik/sudo-gui.vim'
 Bundle 'gmarik/vim-markdown'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-projectionist'
+Bundle 'benmills/vimux'
+Bundle 'benmills/vimux-golang'
+Bundle 'skalnik/vim-vroom'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'majutsushi/tagbar'
@@ -143,7 +152,7 @@ set t_Co=256
 
 " Set font
 if has("gui_running")
-  set guifont=Monaco:h14
+  set guifont=Andale\ Mono:h14
 endif
 
 " Avoid clearing hilight definition in plugins
@@ -529,8 +538,8 @@ nmap <silent> <leader>pa :set paste<cr>
 nmap <silent> <leader>np :set nopaste<cr>
 
 " Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
- 
+nmap <leader>li :set list!<CR>
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
@@ -539,9 +548,10 @@ set listchars=tab:▸\ ,eol:¬
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vimrc_loaded = 1
 
-nmap <silent> <leader>rp :!python %<cr>
-nmap <silent> <leader>rs :!scala %<cr>
-nmap <silent> <leader>rk :!ruby path_to_enlightenment.rb<cr>
+nmap <silent> <leader>dp :Dispatch<cr>
 nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 cnoremap <expr> %% getcmdtype() == ":" ? expand("%:h")."/" : "%%"
+
+" snipmate
+let g:snips_author="Kent Wang"
